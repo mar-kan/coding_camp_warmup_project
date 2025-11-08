@@ -1,0 +1,15 @@
+<h1>{{ question.question_text }}</h1>
+<ul>
+  {% for choice in question.choice_set.all %}
+    <li>{{ choice.choice_text }} — {{ choice.votes }} vote(s)</li>
+  {% endfor %}
+</ul>
+
+<p>
+  <a href="{% url 'polls:index' %}">Back to polls</a> |
+  <a href="{% url 'polls:stats' %}">View overall statistics</a>
+</p>
+
+<a href="{% url 'polls:stats' %}" style="padding:6px 10px;border:1px solid #ccc;border-radius:4px;text-decoration:none;">View statistics</a>
+
+
