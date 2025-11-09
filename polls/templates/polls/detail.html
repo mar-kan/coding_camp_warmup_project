@@ -19,3 +19,4 @@
   <a href="{% url 'polls:stats' %}">View overall statistics</a>
 </p>
 
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}

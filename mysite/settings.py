@@ -27,17 +27,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 
 # Quick-start development settings - unsuitable for production
-<<<<<<< HEAD
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
 SECRET_KEY = "django-insecure-#s0l6cnj)d7l9yyat=7w7=8^1#i7d^s!$u=o^(@#6b7^9^&o_="
-=======
-# See https://docs.djangoproject.com/en/5.2/howto/deployment/checklist/
-
-# SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = "django-insecure-h-wz6sn%k%=um8v8safpha8l6ti!n8ioi)xz7+%x03_^1%%^um"
->>>>>>> joshua/main
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
@@ -51,11 +44,7 @@ CSRF_TRUSTED_ORIGINS = ["https://mariannak.pythonanywhere.com", "https://lennart
 
 # Application definition
 
-<<<<<<< HEAD
-INSTALLED_APPS = [    
-=======
 INSTALLED_APPS = [
->>>>>>> joshua/main
     "polls.apps.PollsConfig",
     "django.contrib.admin",
     "django.contrib.auth",
@@ -63,10 +52,7 @@ INSTALLED_APPS = [
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
-<<<<<<< HEAD
 #    "polls",
-=======
->>>>>>> joshua/main
 ]
 
 MIDDLEWARE = [
@@ -88,10 +74,7 @@ TEMPLATES = [
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
-<<<<<<< HEAD
                 "django.template.context_processors.debug",
-=======
->>>>>>> joshua/main
                 "django.template.context_processors.request",
                 "django.contrib.auth.context_processors.auth",
                 "django.contrib.messages.context_processors.messages",
