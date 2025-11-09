@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
-{% load static %}
+
+    {% load static %}
 
 <head>
     <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js "></script>
@@ -22,5 +23,13 @@
 
     <script src="{% static 'polls/js/poll_chart.js' %}"></script>
 
-</body>
+    <p>
+        <a href="{% url 'polls:index' %}">Back to polls</a> |
+        <a href="{% url 'polls:stats' %}">View overall statistics</a>
+    </p>
+
+    <a href="{% url 'polls:stats' %}" style="padding:6px 10px;border:1px solid #ccc;border-radius:4px;text-decoration:none;">View statistics</a>
+
+</body> 
 </html>
+
