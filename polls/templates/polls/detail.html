@@ -1,3 +1,6 @@
+{% load static %}
+<link rel="stylesheet" href="{% static 'polls/style.css' %}">
+
 <h1>{{ question.question_text }}</h1>
 
 <form action="{% url 'polls:vote' question.id %}" method="post">
@@ -5,7 +8,8 @@
   {% for choice in question.choice_set.all %}
     <label>
       <input type="radio" name="choice" value="{{ choice.id }}">
-      {{ choice.choice_text }}
+      <!--        {{ choice.choice_text }} -->
+        <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
     </label><br>
   {% endfor %}
   <button type="submit">Vote</button>
@@ -15,5 +19,3 @@
   <a href="{% url 'polls:stats' %}">View overall statistics</a>
 </p>
 
-
-{% if error_message %}<p>{{ error_message }}</p>{% endif %}

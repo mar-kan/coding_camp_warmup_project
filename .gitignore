@@ -23,3 +23,12 @@ Thumbs.db
 
 # PythonAnywhere / local dev artifacts
 *.sqlite3
+
+# SQLite database
+db.sqlite3
+tbd.sqlite
+
+# Python cache
+__pycache__/
+*.pyc
+
