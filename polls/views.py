@@ -4,6 +4,7 @@ from django.urls import reverse
 from django.views import generic
 
 from .models import Choice, Question
+import json
 
 
 class IndexView(generic.ListView):
@@ -20,10 +21,20 @@ class DetailView(generic.DetailView):
     template_name = "polls/detail.html"
 
 
-class ResultsView(generic.DetailView):
-    model = Question
-    template_name = "polls/results.html"
 
+def poll_piechart(request, question_id):
+    question = get_object_or_404(Question, pk=question_id)
+    choices = question.choice_set.all()
+
+    texts = [choice.choice_text for choice in choices]
+    votes = [choice.votes for choice in choices]
+
+    data = {
+        'question': question,
+        'choices': json.dumps(texts),
+        'votes': json.dumps(votes)
+    }
+    return render(request, "polls/results.html", data)
 
 def vote(request, question_id):
     question = get_object_or_404(Question, pk=question_id)

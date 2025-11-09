@@ -1,0 +1,30 @@
+h1 {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+#vote-again-btn {
+    display: inline-block;
+    text-decoration: none;
+    background-color: #3498db;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    margin-top: 2rem;
+}
+
+#vote-again-btn:hover {
+    background-color: #2980b9;
+}
+
+#canvas-container {
+    width: 600px;
+    height: 400px;
+   position: relative;
+}

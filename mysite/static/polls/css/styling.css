@@ -1,0 +1,49 @@
+h1 {
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+
+h2 {
+    margin-top: 0;
+    margin-bottom: 4rem;
+    font-size: 2rem;
+    font-weight: 600;
+    color: #D28A8C; 
+    text-align: center;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.1);
+}
+
+
+#vote-again-btn {
+    display: block;
+    width: 100px;
+    margin: 5rem auto 0;
+    text-decoration: none;
+    background-color: #D28A8C;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+#vote-again-btn:hover {
+    background-color: #FFD9CC;
+}
+
+#canvas-container {
+    width: 700px;
+    height: 500px;
+    margin: 50px auto;
+    position: relative;
+    padding-left: 5rem; 
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+}

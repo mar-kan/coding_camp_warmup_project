@@ -1,9 +1,26 @@
-<h1>{{ question.question_text }}</h1>
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
 
-<ul>
-{% for choice in question.choice_set.all %}
-    <li>{{ choice.choice_text }} -- {{ choice.votes }} vote{{ choice.votes|pluralize }}</li>
-{% endfor %}
-</ul>
+<head>
+    <script src=" https://cdn.jsdelivr.net/npm/chart.js@4.5.1/dist/chart.umd.min.js "></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'polls/css/styling.css' %}">
+</head>
 
-<a href="{% url 'polls:detail' question.id %}">Vote again?</a>
+<body>
+    <h1>{{ question.question_text }}</h1>
+    <h2>Poll Results</h2>
+
+    <div id="canvas-container">
+        <canvas id="resultsChart"></canvas>
+    </div>
+
+    <a id="vote-again-btn" href="{% url 'polls:detail' question.id %}">Vote again?</a>
+
+    <script id="chart-choices" type="application/json">{{ choices|safe }}</script>
+    <script id="chart-votes" type="application/json">{{ votes|safe }}</script>
+
+    <script src="{% static 'polls/js/poll_chart.js' %}"></script>
+
+</body>
+</html>
