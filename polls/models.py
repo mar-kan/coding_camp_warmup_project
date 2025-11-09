@@ -6,6 +6,7 @@ import datetime
 class Question(models.Model):
     question_text = models.CharField(max_length=200)
     pub_date = models.DateTimeField("date published")
+
     is_open = models.BooleanField(default=True)
 
     def __str__(self):
@@ -22,3 +23,14 @@ class Choice(models.Model):
 
     def __str__(self):
         return self.choice_text
+
+
+class VoterRecord(models.Model):
+    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    voter_name = models.CharField(max_length=50)
+
+    class Meta:
+        unique_together = ('question', 'voter_name',)
+
+    def __str__(self):
+        return f"{self.voter_name} voted on {self.question.question_text}"
