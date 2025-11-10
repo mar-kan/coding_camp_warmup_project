@@ -13,11 +13,13 @@
           <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br>
     </label><br>
   {% endfor %}
-  
+
     <label for="voter_name">Your Username (required):</label>
     <input type="text" name="voter_name" id="voter_name" required>
     <button type="submit">Vote</button>
 </form>
+
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 
 <p>
   <a href="{% url 'polls:results' question.id %}">See results for this poll</a> |

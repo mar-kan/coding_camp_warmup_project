@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const ctx = document.getElementById('resultsChart').getContext('2d');
     
-    console.log(document.getElementById('chart-choices'));
     const chart = new Chart(ctx, {
         type: 'pie',
         data: {
@@ -10,12 +9,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 label: 'Votes',
                 data: JSON.parse(document.getElementById('chart-votes').textContent),
                 backgroundColor: [
-                    'rgba(255, 99, 132, 0.6)',
-                    'rgba(54, 162, 235, 0.6)',
-                    'rgba(255, 206, 86, 0.6)',
-                    'rgba(75, 192, 192, 0.6)',
-                    'rgba(153, 102, 255, 0.6)',
-                    'rgba(255, 159, 64, 0.6)',
+                    "#C6DEF1", "#D28A8C", "#FFD9CC", "#F2C6DE", "#F7E5EC", "#EEBEC6", "#FDBA90", "#F9D4B2", "#FAEDCB", "#C9E4DE", "#DBCDF0"
                 ],
                 borderColor: 'white',
                 borderWidth: 1
@@ -26,7 +20,7 @@ document.addEventListener('DOMContentLoaded', function () {
             maintainAspectRatio: false,
             plugins: {
                 legend: { position: 'right' },
-                title: { display: true, text: 'Poll Results' }
+                title: { display: false, text: 'Poll Results' }
             }
         }
     });
